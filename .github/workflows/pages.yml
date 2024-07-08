@@ -20,6 +20,11 @@ jobs:
           # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
           # Ref: https://github.com/actions/setup-node#supported-version-syntax
           node-version: "16"
+      - name: Replace secrets in _config.yml
+        run: |
+          sed -i "s/\${USERNAME}/${{ secrets.USERNAME }}/g" _config.yml
+          sed -i "s/\${PASSWORD}/${{ secrets.PASSWORD }}/g" _config.yml
+          sed -i "s/\${SECRET}/${{ secrets.SECRET }}/g" _config.yml
       - name: Cache NPM dependencies
         uses: actions/cache@v4
         with:
