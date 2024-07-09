@@ -25,6 +25,10 @@ jobs:
           sed -i "s/\${USERNAME}/${{ secrets.USERNAME }}/g" _config.yml
           sed -i "s/\${PASSWORD}/${{ secrets.PASSWORD }}/g" _config.yml
           sed -i "s/\${SECRET}/${{ secrets.SECRET }}/g" _config.yml
+          sed -i "s/\${clientSecret}/${{ secrets.ClientSecret }}/g" _config.redefine.yml
+      - name: print _config.yml
+        run: |
+          cat _config.yml
       - name: Cache NPM dependencies
         uses: actions/cache@v4
         with:
