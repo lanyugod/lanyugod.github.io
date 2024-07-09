@@ -1,8 +1,13 @@
 ---
 title: Spring Boot笔记
 date: 2024-07-08 22:59:58
-tags:
-description: 简化Spring应用开发的一个框架
+tags: 
+  - SpringBoot
+  - JAVA
+categories:
+  - 后端
+cover: https://s1.51ctocdn.cn/images/201910/19/902dd02036467f2cd3726cb1452a8597.jpg?x-oss-process=image
+excerpt: Spring Boot的学习笔记笔记
 ---
 # **一、**Spring Boot 入门
 

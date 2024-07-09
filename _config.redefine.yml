@@ -346,7 +346,7 @@ comment:
   # Whether to enable comment
   enable: true
   # Comment system
-  system: waline # waline, gitalk, twikoo, giscus
+  system: gitalk # waline, gitalk, twikoo, giscus
   # System configuration
   config:
     # Waline comment system. See https://waline.js.org/
@@ -359,10 +359,10 @@ comment:
       reaction: false # Waline reaction. See https://waline.js.org/reference/client/props.html#reaction
     # Gitalk comment system. See https://github.com/gitalk/gitalk
     gitalk:
-      clientID: # GitHub Application Client ID
-      clientSecret: # GitHub Application Client Secret
-      repo: # GitHub repository
-      owner: # GitHub repository owner
+      clientID: Ov23liwtbsNi4H6XGmJH # GitHub Application Client ID
+      clientSecret: ${clientSecret} # GitHub Application Client Secret
+      repo: GitTalk # GitHub repository
+      owner:  lanyugod # GitHub repository owner
       proxy: # GitHub repository proxy
     # Twikoo comment system. See https://twikoo.js.org/
     twikoo:
