@@ -363,7 +363,7 @@ comment:
       clientSecret: ${clientSecret} # GitHub Application Client Secret
       repo: GitTalk # GitHub repository
       owner:  lanyugod # GitHub repository owner
-      proxy: # GitHub repository proxy
+      proxy: https://strong-caramel-969805.netlify.app/github_access_token # GitHub repository proxy
     # Twikoo comment system. See https://twikoo.js.org/
     twikoo:
       version: 1.6.10 # Twikoo version, do not modify if you dont know what it is
