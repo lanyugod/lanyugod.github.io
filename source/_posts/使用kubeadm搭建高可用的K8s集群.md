@@ -3,6 +3,7 @@ title: 使用kubeadm搭建高可用的K8s集群
 date: 2024-07-08 23:27:28
 tags: [K8S]
 cover: "https://img0.baidu.com/it/u=2081643785,977821587&fm=253&fmt=auto&app=138&f=JPEG?w=890&h=500"
+description: kubeadm是官方社区推出的一个用于快速部署kubernetes集群的工具,这个工具能通过两条指令完成一个kubernetes集群的部署：
 ---
 
 kubeadm是官方社区推出的一个用于快速部署kubernetes集群的工具。
