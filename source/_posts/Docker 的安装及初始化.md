@@ -1,3 +1,16 @@
+---
+title: Docker 的安装及初始化
+date: 2024-07-08 22:59:58
+tags: 
+  - Docker
+  - Linux
+categories:
+  - Linux
+  - Docker
+cover: https://www.docker.com/app/uploads/2025/03/image-1280x1280.png
+excerpt: Docker 的安装及初始化
+---
+
 # Docker 的安装及初始化
 
 ## 1.安装可以访问的源
