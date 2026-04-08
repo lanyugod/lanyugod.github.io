@@ -1,3 +1,9 @@
-- image: https://picsum.photos/id/12/2500/1800
-  title: Lorem ipsum
-  description: Lorem ipsum dolor sit amet
+- image: /images/photo_album/新年快乐.jpeg
+  title: 新年快乐
+  description: 除夕夜包饺子
+- image: /images/photo_album/昆明—捞鱼河-猫猫.jpeg
+  title: 昆明猫猫
+  description: 昆明捞鱼河湿地公园猫猫
+- image: /images/photo_album/捞鱼河-树.jpeg
+  title: 捞鱼河-树
+  description: 昆明捞鱼河湿地公园一图
