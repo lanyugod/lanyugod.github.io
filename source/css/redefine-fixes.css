@@ -1,0 +1,114 @@
+/* Compatibility fixes for Redefine 2.9.x page templates. */
+
+.archive-container {
+  padding: 28px 32px;
+}
+
+.archive-list-container .archive-item {
+  margin-bottom: 2.25rem;
+}
+
+.archive-list-container .archive-item-header {
+  margin-bottom: 0.75rem;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.archive-list-container .archive-year {
+  line-height: 1;
+}
+
+.archive-list-container .article-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.archive-list-container .article-item {
+  margin: 0;
+  padding: 0.9rem 0 0.9rem 3.2rem;
+  border-left-width: 1px;
+}
+
+.archive-list-container .article-item::before {
+  left: 1rem;
+  top: 0.95rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.archive-list-container .article-title {
+  display: block;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+.archive-list-container .article-item a {
+  display: block;
+  width: 100%;
+}
+
+.archive-list-container .article-item span.article-title::after {
+  left: -2.05rem;
+  top: 0.62rem;
+}
+
+#masonry-container {
+  width: 100%;
+  min-height: 24vh;
+}
+
+#masonry-container .masonry-item {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+#masonry-container .image-container {
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--third-background-color);
+  box-shadow: var(--redefine-box-shadow-flat);
+}
+
+#masonry-container .image-container img {
+  display: block;
+}
+
+#masonry-container .image-title,
+#masonry-container .image-description {
+  left: 0.75rem;
+  right: 0.75rem;
+  max-width: none;
+}
+
+#masonry-container .image-title {
+  top: 0.75rem;
+}
+
+#masonry-container .image-description {
+  bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .archive-container {
+    padding: 20px 14px;
+  }
+
+  .archive-list-container .article-list {
+    padding-left: 0.75rem;
+  }
+
+  .archive-list-container .article-item {
+    padding-left: 2.7rem;
+  }
+
+  .archive-list-container .article-item::before {
+    left: 0.65rem;
+  }
+
+  .archive-list-container .article-item span.article-title::after {
+    left: -1.55rem;
+  }
+}
