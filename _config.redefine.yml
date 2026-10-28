@@ -15,7 +15,7 @@ info:
   # Author name
   author: Lan Yu
   # Site URL
-  url: https://blog.lanyu.wiki
+  url: https://blog.lanyu.dev
 # BASIC INFORMATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -39,7 +39,7 @@ colors:
   # Secondary color (TBD)
   secondary:
   # Default theme mode initial value (will be overwritten by prefer-color-scheme)
-  default_mode: light # light, dark
+  default_mode: dark # light, dark
 # COLORS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -206,7 +206,7 @@ navbar:
       submenus:
         Me: /about
         Github: https://github.com/lanyugod
-        Blog: https://blog.lanyu.wiki
+        Blog: https://blog.lanyu.dev
         Friends: /friends
     Links:
       icon: fa-regular fa-link
