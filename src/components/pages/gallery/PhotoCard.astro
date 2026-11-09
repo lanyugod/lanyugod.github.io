@@ -1,0 +1,35 @@
+---
+import galleryPhotos from "@/data/gallery.json";
+import { getLqipProps } from "@/utils/lqip-utils";
+
+interface Props {
+	src: string;
+	albumId: string;
+	alt?: string;
+}
+
+const { src, albumId, alt = "" } = Astro.props;
+const photoInfo = galleryPhotos.find((photo) => decodeURI(new URL(src, "https://local.invalid").pathname) === photo.image);
+
+// LQIP 渐变占位
+const lqipProps = getLqipProps(src, undefined, true);
+---
+
+<div class="gallery-photo-card break-inside-avoid mb-3">
+  <div
+    data-fancybox={`gallery-${albumId}`}
+    data-src={src}
+    data-type="image"
+    class="block rounded-xl overflow-hidden relative group cursor-pointer"
+  >
+    <div class="lqip-placeholder absolute inset-0 pointer-events-none" style={lqipProps.style} aria-hidden="true"></div>
+    <img
+      src={src}
+      alt={photoInfo?.title || alt}
+      loading="lazy"
+      decoding="async"
+      class="w-full h-auto object-cover opacity-0 transition-all duration-500 ease-out group-hover:scale-105"
+    />
+  </div>
+{photoInfo && <div class="px-3 pb-3 text-sm"><p class="font-medium">{photoInfo.title}</p><p class="opacity-70">{photoInfo.description}</p></div>}
+</div>
