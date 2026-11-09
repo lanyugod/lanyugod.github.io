@@ -1,0 +1,29 @@
+# Example only. Review NAS paths and network isolation before starting.
+services:
+  media:
+    image: nginxinc/nginx-unprivileged:stable-alpine
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    volumes:
+      - ${BLOG_PUBLIC_DIR:?Set an absolute public directory}:/srv/public:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    tmpfs:
+      - /tmp
+    networks: [blog-media]
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: ${TUNNEL_TOKEN:?Set the tunnel token locally on your NAS}
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    networks: [blog-media]
+networks:
+  blog-media:
+    driver: bridge
+# No host ports are published. This bridge does not by itself block NAS/LAN egress;
+# enforce that boundary in your NAS firewall/network policy.
